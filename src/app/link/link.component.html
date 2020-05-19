@@ -1,19 +1,15 @@
-<div class="max-w-sm rounded overflow-hidden shadow-lg m-5">
-    <div class="">
+<div class="w-auto rounded overflow-hidden shadow-lg m-5">
+    <div class="bg-gray-300 text-purple-700 h-12 text-2xl flex justify-center items-center">
         <a href="{{link.link}}" target="_blank">
             {{link.title}}
         </a>
     </div>
-    <div class="">
+    <div class=" h-48 flex justify-center items-center flex-col">
         Points:
-        <h3>{{link.votes}}</h3>
+        <h3 class="text-6xl">{{link.votes}}</h3>
     </div>
-    <div class="text-xl">
-        <button (click)="link.voteUp()">
-            Up
-        </button>
-        <button (click)="link.voteDown()">
-            Down
-        </button>
+    <div class="text-xl bg-gray-300 h-20 flex justify-center items-center">
+        <button (click)="link.voteUp()" class="far fa-thumbs-up text-red-500 text-5xl hover:text-blue-600"></button>
+        <button class="far fa-thumbs-down text-red-500 text-5xl ml-6 hover:text-blue-600" (click)="link.voteDown()"></button>
     </div>
 </div>
